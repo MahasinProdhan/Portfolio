@@ -1,0 +1,46 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styles */
+* {
+  font-family: Outfit, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-textPrimary;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar active section */
+.active-link {
+  @apply text-primary;
+}
+
+/* Reusable button styles */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg text-white font-medium
+         bg-primary-gradient shadow-soft
+         hover:opacity-90 transition;
+}
+
+.btn-outline {
+  @apply px-6 py-3 rounded-lg border
+         border-primary text-primary
+         hover:bg-primary hover:text-white
+         transition;
+}
