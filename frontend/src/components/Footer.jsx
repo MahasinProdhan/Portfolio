@@ -4,16 +4,20 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
-      {/* Top separator line */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      {/* Top shadow separator (key fix) */}
+      <div
+        className="absolute top-0 left-0 w-full h-8
+                   bg-gradient-to-b from-black/10 to-transparent
+                   pointer-events-none z-10"
+      />
 
-      {/* Background */}
-      <div className="relative bg-gradient-to-b from-bg to-primary/5">
-        {/* Softer, smaller glows */}
-        <div className="absolute left-1/3 bottom-0 w-[260px] h-[260px] bg-primary/20 blur-[120px] rounded-full" />
-        <div className="absolute right-1/4 top-0 w-[220px] h-[220px] bg-secondary/20 blur-[100px] rounded-full" />
+      {/* Footer background */}
+      <div className="relative bg-gradient-to-b from-bg/90 via-bg/80 to-bg">
+        {/* Glows pushed DOWN so they don’t blend upward */}
+        <div className="absolute left-1/4 bottom-[-120px] w-[220px] h-[220px] bg-primary/10 blur-[160px] rounded-full" />
+        <div className="absolute right-1/4 bottom-[-120px] w-[200px] h-[200px] bg-secondary/10 blur-[160px] rounded-full" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-10">
+        <div className="relative max-w-7xl mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Brand */}
             <div className="text-center md:text-left">
@@ -25,7 +29,7 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Socials */}
+            {/* Social Icons */}
             <div className="flex justify-center gap-4">
               {[
                 { icon: <FaGithub />, link: "https://github.com/yourusername" },
@@ -45,7 +49,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg
-                             bg-white/80 backdrop-blur
+                             bg-white/70 backdrop-blur
                              border border-border
                              text-textSecondary
                              hover:text-primary hover:border-primary/40
