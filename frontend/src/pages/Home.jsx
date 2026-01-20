@@ -8,7 +8,6 @@ import Contact from "../sections/Contact";
 const Home = () => {
   return (
     <>
-      Hi
       <Hero />
       <About />
       <Skills />
