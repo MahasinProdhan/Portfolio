@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <p>HIII</p>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/:id" element={<ProjectDetails />} />
