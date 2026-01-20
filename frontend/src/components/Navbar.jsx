@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between px-6 py-4">
             {/* Logo / Name */}
             <Link to="/" className="text-xl font-bold text-textPrimary">
-              Sourav<span className="text-primary">.</span>
+              Mahasin<span className="text-primary">.</span>
             </Link>
 
             {/* Desktop Menu */}
