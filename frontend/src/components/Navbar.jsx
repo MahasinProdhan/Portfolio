@@ -46,17 +46,6 @@ const Navbar = () => {
                 </NavLink>
               )}
 
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-primary font-medium"
-                    : "text-textSecondary hover:text-primary"
-                }
-              >
-                Blog
-              </NavLink>
-
               {/* Theme Toggle Placeholder */}
               <button className="text-xl">🌙</button>
             </div>
@@ -83,10 +72,6 @@ const Navbar = () => {
                   Home
                 </NavLink>
               )}
-
-              <NavLink to="/blog" onClick={() => setMenuOpen(false)}>
-                Blog
-              </NavLink>
             </div>
           )}
         </div>
