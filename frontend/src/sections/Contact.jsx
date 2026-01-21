@@ -1,4 +1,10 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaEnvelope,
+  FaFacebook,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
@@ -54,6 +60,11 @@ const Contact = () => {
                   link: "https://www.linkedin.com/in/mahasin-prodhan-b19387277/",
                 },
                 { icon: <FaXTwitter />, link: "https://x.com/MahasinProdhan1" },
+
+                {
+                  icon: <FaFacebook />,
+                  link: "https://www.facebook.com/mahasin.prodhan2004",
+                },
                 {
                   icon: <FaInstagram />,
                   link: "https://www.instagram.com/mahasin_prodhan",
