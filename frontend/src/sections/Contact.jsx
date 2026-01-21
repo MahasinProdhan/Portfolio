@@ -3,15 +3,15 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-32 bg-bg overflow-hidden">
+    <section id="contact" className="relative py-32 overflow-hidden bg-bg">
       {/* Background glow */}
       <div className="absolute top-32 left-1/4 w-[420px] h-[420px] bg-primary/15 blur-[120px] rounded-full" />
       <div className="absolute bottom-32 right-1/4 w-[360px] h-[360px] bg-secondary/15 blur-[100px] rounded-full" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative px-6 mx-auto max-w-7xl">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-textPrimary">
+          <h2 className="text-4xl font-extrabold md:text-5xl text-textPrimary">
             Contact Me
           </h2>
           <p className="mt-4 text-lg text-textSecondary">
@@ -20,10 +20,10 @@ const Contact = () => {
         </div>
 
         {/* Main Layout */}
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="grid items-start gap-20 lg:grid-cols-2">
           {/* LEFT SIDE */}
           <div className="space-y-6">
-            <p className="text-textSecondary text-lg leading-relaxed max-w-xl">
+            <p className="max-w-xl text-lg leading-relaxed text-textSecondary">
               I’m open to full-stack development opportunities, internships, and
               collaborative projects. Whether you want to build something new or
               discuss an idea, feel free to reach out.
@@ -47,11 +47,11 @@ const Contact = () => {
               {[
                 {
                   icon: <FaGithub />,
-                  link: "https://github.com/mahasinprodhan",
+                  link: "https://github.com/MahasinProdhan",
                 },
                 {
                   icon: <FaLinkedin />,
-                  link: "https://linkedin.com/in/yourusername",
+                  link: "https://www.linkedin.com/in/mahasin-prodhan-b19387277/",
                 },
                 { icon: <FaXTwitter />, link: "https://x.com/MahasinProdhan1" },
                 {
@@ -64,10 +64,7 @@ const Contact = () => {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-white/90 backdrop-blur
-                             border border-border text-textSecondary
-                             hover:text-primary hover:border-primary/40
-                             transition-all"
+                  className="p-4 transition-all border rounded-xl bg-white/90 backdrop-blur border-border text-textSecondary hover:text-primary hover:border-primary/40"
                 >
                   <span className="text-xl">{social.icon}</span>
                 </a>
@@ -77,7 +74,7 @@ const Contact = () => {
 
           {/* RIGHT SIDE — FORM */}
           {/* RIGHT SIDE — FORM */}
-          <div className="p-8 rounded-3xl bg-white/95 backdrop-blur border border-border shadow-soft lg:-mt-24">
+          <div className="p-8 border rounded-3xl bg-white/95 backdrop-blur border-border shadow-soft lg:-mt-24">
             <form className="space-y-4">
               {/* Name */}
               <div>
@@ -87,8 +84,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-xl border border-border
-                   focus:outline-none focus:ring-2 focus:ring-primary/30"
+                  className="w-full px-4 py-3 border rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
@@ -100,8 +96,7 @@ const Contact = () => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-xl border border-border
-                   focus:outline-none focus:ring-2 focus:ring-primary/30"
+                  className="w-full px-4 py-3 border rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
@@ -113,8 +108,7 @@ const Contact = () => {
                 <textarea
                   rows="3"
                   placeholder="Your Message"
-                  className="w-full px-4 py-3 rounded-xl border border-border
-                   focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
+                  className="w-full px-4 py-3 border resize-none rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
@@ -128,7 +122,7 @@ const Contact = () => {
                 Send Message
               </button>
 
-              <p className="text-center text-sm text-textSecondary pt-1">
+              <p className="pt-1 text-sm text-center text-textSecondary">
                 I usually reply within 24 hours
               </p>
             </form>

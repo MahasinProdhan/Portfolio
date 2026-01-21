@@ -5,11 +5,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* Top shadow separator (key fix) */}
-      <div
-        className="absolute top-0 left-0 w-full h-8
-                   bg-gradient-to-b from-black/10 to-transparent
-                   pointer-events-none z-10"
-      />
+      <div className="absolute top-0 left-0 z-10 w-full h-8 pointer-events-none bg-gradient-to-b from-black/10 to-transparent" />
 
       {/* Footer background */}
       <div className="relative bg-gradient-to-b from-bg/90 via-bg/80 to-bg">
@@ -17,8 +13,8 @@ const Footer = () => {
         <div className="absolute left-1/4 bottom-[-120px] w-[220px] h-[220px] bg-primary/10 blur-[160px] rounded-full" />
         <div className="absolute right-1/4 bottom-[-120px] w-[200px] h-[200px] bg-secondary/10 blur-[160px] rounded-full" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="relative px-6 py-12 mx-auto max-w-7xl">
+          <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-3">
             {/* Brand */}
             <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold text-textPrimary">
@@ -32,10 +28,13 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex justify-center gap-4">
               {[
-                { icon: <FaGithub />, link: "https://github.com/yourusername" },
+                {
+                  icon: <FaGithub />,
+                  link: "https://github.com/MahasinProdhan",
+                },
                 {
                   icon: <FaLinkedin />,
-                  link: "https://linkedin.com/in/yourusername",
+                  link: "https://www.linkedin.com/in/mahasin-prodhan-b19387277/",
                 },
                 { icon: <FaXTwitter />, link: "https://x.com/MahasinProdhan1" },
                 {
@@ -61,7 +60,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-center md:text-right text-xs text-textSecondary">
+            <div className="text-xs text-center md:text-right text-textSecondary">
               © {new Date().getFullYear()} Mahasin Prodhan
               <div className="mt-1 opacity-70">Designed & Built with care</div>
             </div>
