@@ -25,7 +25,7 @@ export const projects = [
     ],
 
     githubLink: "https://github.com/mahasinprodhan/docnow",
-    liveLink: "https://quickblog-gs.vercel.app/", // keep empty if not deployed
+    liveLink: "https://docnest-z4gx.onrender.com/", // keep empty if not deployed
     image: "/projects/docnow.png",
     status: "Completed",
   },
@@ -59,8 +59,8 @@ export const projects = [
       "Protected routes and admin dashboard",
     ],
 
-    githubLink: "https://github.com/mahasinprodhan/blogifyai",
-    liveLink: "https://civira.onrender.com/",
+    githubLink: "https://github.com/MahasinProdhan/Blogify-AI",
+    liveLink: "https://quickblog-gs.vercel.app/",
     image: "/projects/blogifyai.png",
     status: "Completed",
   },
