@@ -4,6 +4,7 @@ import Skills from "../sections/Skills";
 import Projects from "../sections/Projects";
 import Certifications from "../sections/Certifications";
 import Contact from "../sections/Contact";
+import Education from "../sections/Education";
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
       <About />
       <Skills />
       <Projects />
-      <Certifications />
+      <Education />
+      {/* <Certifications /> */}
       <Contact />
     </>
   );
