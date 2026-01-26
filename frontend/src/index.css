@@ -33,14 +33,9 @@ body {
 
 /* Reusable button styles */
 .btn-primary {
-  @apply px-6 py-3 rounded-lg text-white font-medium
-         bg-primary-gradient shadow-soft
-         hover:opacity-90 transition;
+  @apply px-6 py-3 font-medium text-white transition rounded-lg bg-primary-gradient shadow-soft hover:opacity-90;
 }
 
 .btn-outline {
-  @apply px-6 py-3 rounded-lg border
-         border-primary text-primary
-         hover:bg-primary hover:text-white
-         transition;
+  @apply px-6 py-3 transition border rounded-lg border-primary text-primary hover:bg-primary hover:text-white;
 }

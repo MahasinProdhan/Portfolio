@@ -1,3 +1,5 @@
+/* Now dark theme is not implemented to do this just update the navbar */
+
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
