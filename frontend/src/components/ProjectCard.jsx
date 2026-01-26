@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
         <img
           src={image}
           alt={title}
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02]"
         />
 
         {/* 🔥 Show badge ONLY if project is ongoing */}
