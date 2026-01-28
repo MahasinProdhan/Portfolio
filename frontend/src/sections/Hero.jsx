@@ -22,7 +22,7 @@ const Hero = () => {
         {/* LEFT CONTENT */}
         <div className="order-2 text-center lg:order-1 lg:text-left">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border mb-6 shadow-soft">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border mb-2 mt-3 shadow-soft">
             <span className="relative flex w-2 h-2">
               <span className="absolute inline-flex w-full h-full bg-green-400 rounded-full animate-ping opacity-60"></span>
               <span className="relative inline-flex w-2 h-2 bg-green-500 rounded-full"></span>
@@ -65,7 +65,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="px-8 py-4 font-semibold transition-all duration-300 bg-white border rounded-2xl border-primary text-primary hover:bg-primary hover:text-white"
             >
-              Download CV
+              View Resume
             </a>
           </div>
 
