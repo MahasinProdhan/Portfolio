@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { sendContactForm } from "../utils/api";
 
 const Contact = () => {
@@ -15,22 +16,32 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("Please fill all fields");
+      return;
+    }
+
     setLoading(true);
 
     try {
       await sendContactForm(formData);
-      alert("Message sent successfully 🚀");
+
+      toast.success("Message sent successfully 🚀");
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      alert("Failed to send message ❌");
+    } catch (error) {
+      console.error("Contact form error:", error);
+      toast.error("Failed to send message ❌ Please try again");
     } finally {
       setLoading(false);
     }
@@ -38,10 +49,12 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative py-32 overflow-hidden bg-bg">
+      {/* Background blur */}
       <div className="absolute top-32 left-1/4 w-[420px] h-[420px] bg-primary/15 blur-[120px] rounded-full" />
       <div className="absolute bottom-32 right-1/4 w-[360px] h-[360px] bg-secondary/15 blur-[100px] rounded-full" />
 
       <div className="relative px-6 mx-auto max-w-7xl">
+        {/* Heading */}
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl font-extrabold md:text-5xl text-textPrimary">
             Contact Me
@@ -109,7 +122,7 @@ const Contact = () => {
           <div className="p-8 border rounded-3xl bg-white/95 backdrop-blur border-border shadow-soft lg:-mt-24">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium text-textPrimary mb-1.5">
+                <label className="block mb-1.5 text-sm font-medium text-textPrimary">
                   Name
                 </label>
                 <input
@@ -123,7 +136,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-textPrimary mb-1.5">
+                <label className="block mb-1.5 text-sm font-medium text-textPrimary">
                   Email
                 </label>
                 <input
@@ -137,7 +150,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-textPrimary mb-1.5">
+                <label className="block mb-1.5 text-sm font-medium text-textPrimary">
                   Message
                 </label>
                 <textarea
@@ -153,7 +166,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3.5 rounded-2xl bg-primary-gradient text-white font-semibold shadow-soft hover:shadow-xl transition-all duration-300"
+                className="w-full py-3.5 rounded-2xl bg-primary-gradient text-white font-semibold shadow-soft hover:shadow-xl transition-all duration-300 disabled:opacity-70"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
