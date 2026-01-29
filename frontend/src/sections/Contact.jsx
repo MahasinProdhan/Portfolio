@@ -6,16 +6,42 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useState } from "react";
+import { sendContactForm } from "../utils/api";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await sendContactForm(formData);
+      alert("Message sent successfully 🚀");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      alert("Failed to send message ❌");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative py-32 overflow-hidden bg-bg">
-      {/* Background glow */}
       <div className="absolute top-32 left-1/4 w-[420px] h-[420px] bg-primary/15 blur-[120px] rounded-full" />
       <div className="absolute bottom-32 right-1/4 w-[360px] h-[360px] bg-secondary/15 blur-[100px] rounded-full" />
 
       <div className="relative px-6 mx-auto max-w-7xl">
-        {/* Header */}
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl font-extrabold md:text-5xl text-textPrimary">
             Contact Me
@@ -25,7 +51,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Main Layout */}
         <div className="grid items-start gap-20 lg:grid-cols-2">
           {/* LEFT SIDE */}
           <div className="space-y-6">
@@ -35,7 +60,6 @@ const Contact = () => {
               discuss an idea, feel free to reach out.
             </p>
 
-            {/* Email */}
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-xl bg-primary/10 text-primary">
                 <FaEnvelope />
@@ -48,7 +72,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-4 pt-2">
               {[
                 {
@@ -60,7 +83,6 @@ const Contact = () => {
                   link: "https://www.linkedin.com/in/mahasin-prodhan-b19387277/",
                 },
                 { icon: <FaXTwitter />, link: "https://x.com/MahasinProdhan1" },
-
                 {
                   icon: <FaFacebook />,
                   link: "https://www.facebook.com/mahasin.prodhan2004",
@@ -84,53 +106,56 @@ const Contact = () => {
           </div>
 
           {/* RIGHT SIDE — FORM */}
-          {/* RIGHT SIDE — FORM */}
           <div className="p-8 border rounded-3xl bg-white/95 backdrop-blur border-border shadow-soft lg:-mt-24">
-            <form className="space-y-4">
-              {/* Name */}
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-textPrimary mb-1.5">
                   Name
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your Name"
                   className="w-full px-4 py-3 border rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-textPrimary mb-1.5">
                   Email
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your Email"
                   className="w-full px-4 py-3 border rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
-              {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-textPrimary mb-1.5">
                   Message
                 </label>
                 <textarea
                   rows="3"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Your Message"
                   className="w-full px-4 py-3 border resize-none rounded-xl border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-2xl bg-primary-gradient
-                 text-white font-semibold shadow-soft
-                 hover:shadow-xl transition-all duration-300"
+                disabled={loading}
+                className="w-full py-3.5 rounded-2xl bg-primary-gradient text-white font-semibold shadow-soft hover:shadow-xl transition-all duration-300"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
 
               <p className="pt-1 text-sm text-center text-textSecondary">

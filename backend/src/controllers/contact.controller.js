@@ -19,14 +19,17 @@ export const createContact = async (req, res) => {
       message,
     });
 
-    // 2️⃣ Send email notification
-    await sendContactEmail({ name, email, message });
-
+    // 2️⃣ Respond IMMEDIATELY
     res.status(201).json({
       success: true,
       message: "Message sent successfully",
       data: contact,
     });
+
+    // 3️⃣ Send email AFTER response (non-blocking)
+    sendContactEmail({ name, email, message }).catch((err) =>
+      console.error("Email failed:", err),
+    );
   } catch (error) {
     console.error("Create Contact Error:", error);
     res.status(500).json({

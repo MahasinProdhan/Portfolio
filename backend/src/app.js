@@ -2,9 +2,8 @@ import dotenv from "dotenv";
 import path from "path";
 
 // 🔥 ABSOLUTE, FOOLPROOF .env loading
-dotenv.config({
-  path: path.resolve(process.cwd(), ".env"),
-});
+// import dotenv from "dotenv";
+dotenv.config();
 
 import express from "express";
 import cors from "cors";
