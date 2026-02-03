@@ -101,4 +101,69 @@ export const projects = [
     image: "/projects/civira.png",
     status: "Ongoing",
   },
+  {
+    id: 4,
+    title: "Cognix",
+    subtitle: "AI Chat & Image Generation Platform",
+    slug: "cognix-ai-chat-image-platform",
+
+    shortDescription:
+      "A ChatGPT-inspired MERN application offering AI-powered chat and image generation.",
+
+    description:
+      "Cognix is a full-stack AI platform inspired by ChatGPT, built using the MERN stack. It supports real-time conversational AI and image generation by integrating OpenAI and Google Gemini APIs. The application includes secure authentication, prompt-based interactions, and optimized API handling to manage AI responses efficiently.",
+
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "OpenAI API",
+      "Google Gemini API",
+      "ImageKit",
+    ],
+
+    features: [
+      "AI-powered chat interface",
+      "Text-to-image generation",
+      "Integration with OpenAI and Gemini APIs",
+      "Secure JWT-based authentication",
+      "Optimized API request handling",
+      "Modern and responsive UI",
+    ],
+
+    githubLink: "https://github.com/MahasinProdhan/Cognix", // placeholder
+    liveLink: "https://cognix.app", // placeholder
+    image: "/projects/cognix.png",
+    status: "Completed",
+  },
+
+  {
+    id: 5,
+    title: "Portfolio",
+    subtitle: "Personal Developer Portfolio",
+    slug: "personal-mern-portfolio",
+
+    shortDescription:
+      "A full-stack MERN portfolio showcasing projects, skills, and a functional contact system.",
+
+    description:
+      "This is a personal portfolio website built using the MERN stack to showcase projects, skills, and experience. It includes a backend-powered contact form implemented using Nodemailer for secure email delivery. The project follows a clean design approach with optimized performance and scalability in mind.",
+
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Nodemailer"],
+
+    features: [
+      "Modern and responsive UI",
+      "Dynamic project showcase",
+      "Backend-powered contact form",
+      "Email notifications using Nodemailer",
+      "Clean and scalable MERN architecture",
+    ],
+
+    githubLink: "https://github.com/MahasinProdhan/Portfolio", // placeholder
+    liveLink: "https://mahasinportfolio.vercel.app/", // placeholder
+    image: "/projects/portfolio.png",
+    status: "Completed",
+  },
 ];
