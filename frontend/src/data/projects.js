@@ -25,7 +25,7 @@ export const projects = [
     ],
 
     githubLink: "https://github.com/mahasinprodhan/docnow",
-    liveLink: "https://docnest-z4gx.onrender.com/", // keep empty if not deployed
+    liveLink: "https://doc-now-nu.vercel.app/", // keep empty if not deployed
     image: "/projects/docnow.png",
     status: "Completed",
   },
