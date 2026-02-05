@@ -60,7 +60,7 @@ export const projects = [
     ],
 
     githubLink: "https://github.com/MahasinProdhan/Blogify-AI",
-    liveLink: "https://quickblog-gs.vercel.app/",
+    liveLink: "https://blogify-ai-flame.vercel.app//",
     image: "/projects/blogifyai.png",
     status: "Completed",
   },
