@@ -59,9 +59,9 @@ const ProjectCard = ({ project }) => {
         <div className="flex items-center justify-between pt-4">
           <Link
             to={`/projects/${slug}`}
-            className="text-sm font-semibold text-primary hover:underline"
+            // className="text-sm font-semibold text-primary hover:underline"
           >
-            View Details →
+            <div></div>
           </Link>
 
           <div className="flex items-center gap-3">
