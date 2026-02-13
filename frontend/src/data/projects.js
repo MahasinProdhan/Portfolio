@@ -32,36 +32,29 @@ export const projects = [
 
   {
     id: 2,
-    title: "BlogifyAI",
-    subtitle: "AI-Powered Blogging Platform",
-    slug: "blogifyai-ai-powered-blogging-platform",
+    title: "Mindmine Institute",
+    subtitle: "Coaching Institute Website",
+    slug: "mindmine-institute-coaching-platform",
 
     shortDescription:
-      "A MERN-based blogging platform with AI-assisted content generation and role-based access control.",
+      "A MERN-based coaching institute platform showcasing courses, categories, and institute details with a modern UI.",
 
     description:
-      "BlogifyAI is a full-stack blogging platform built using the MERN stack. It features JWT-based authentication, role-based access control for users and admins, and a structured publishing workflow. The platform integrates the Gemini API to generate AI-assisted blog content and supports secure image uploads and content management.",
+      "Mindmine Institute is a full-stack coaching institute platform built using the MERN stack. The project focuses on presenting courses, categories, and institute information through a clean, responsive, and user-friendly interface. It is designed to scale as an educational platform with structured content management and modern web practices.",
 
-    techStack: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Gemini API",
-    ],
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "MERN Stack"],
 
     features: [
-      "JWT-based authentication and authorization",
-      "Role-based access (User, Admin)",
-      "AI-powered content generation using Gemini API",
-      "Image uploads and content management",
-      "Protected routes and admin dashboard",
+      "Course and category-based navigation",
+      "Modern and responsive UI",
+      "Scalable MERN architecture",
+      "Clean project structure",
+      "Live deployment on Vercel",
     ],
 
-    githubLink: "https://github.com/MahasinProdhan/Blogify-AI",
-    liveLink: "https://blogify-ai-flame.vercel.app//",
-    image: "/projects/blogifyai.png",
+    githubLink: "https://github.com/passportpulse/mind-mine-institute-mahasin",
+    liveLink: "https://mind-mine-institute-mahasin.vercel.app/",
+    image: "/projects/mindmine.png",
     status: "Completed",
   },
 
@@ -101,8 +94,72 @@ export const projects = [
     image: "/projects/civira.png",
     status: "Ongoing",
   },
+
   {
     id: 4,
+    title: "BlogifyAI",
+    subtitle: "AI-Powered Blogging Platform",
+    slug: "blogifyai-ai-powered-blogging-platform",
+
+    shortDescription:
+      "A MERN-based blogging platform with AI-assisted content generation and role-based access control.",
+
+    description:
+      "BlogifyAI is a full-stack blogging platform built using the MERN stack. It features JWT-based authentication, role-based access control for users and admins, and a structured publishing workflow. The platform integrates the Gemini API to generate AI-assisted blog content and supports secure image uploads and content management.",
+
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Gemini API",
+    ],
+
+    features: [
+      "JWT-based authentication and authorization",
+      "Role-based access (User, Admin)",
+      "AI-powered content generation using Gemini API",
+      "Image uploads and content management",
+      "Protected routes and admin dashboard",
+    ],
+
+    githubLink: "https://github.com/MahasinProdhan/Blogify-AI",
+    liveLink: "https://blogify-ai-flame.vercel.app//",
+    image: "/projects/blogifyai.png",
+    status: "Completed",
+  },
+
+  {
+    id: 5,
+    title: "Portfolio",
+    subtitle: "Personal Developer Portfolio",
+    slug: "personal-mern-portfolio",
+
+    shortDescription:
+      "A full-stack MERN portfolio showcasing projects, skills, and a functional contact system.",
+
+    description:
+      "This is a personal portfolio website built using the MERN stack to showcase projects, skills, and experience. It includes a backend-powered contact form implemented using Nodemailer for secure email delivery. The project follows a clean design approach with optimized performance and scalability in mind.",
+
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Nodemailer"],
+
+    features: [
+      "Modern and responsive UI",
+      "Dynamic project showcase",
+      "Backend-powered contact form",
+      "Email notifications using Nodemailer",
+      "Clean and scalable MERN architecture",
+    ],
+
+    githubLink: "https://github.com/MahasinProdhan/Portfolio", // placeholder
+    liveLink: "https://mahasinportfolio.vercel.app/", // placeholder
+    image: "/projects/portfolio.png",
+    status: "Completed",
+  },
+
+  {
+    id: 6,
     title: "Cognix",
     subtitle: "AI Chat & Image Generation Platform",
     slug: "cognix-ai-chat-image-platform",
@@ -136,34 +193,6 @@ export const projects = [
     githubLink: "https://github.com/MahasinProdhan/Cognix", // placeholder
     liveLink: "https://cognix.app", // placeholder
     image: "/projects/cognix.png",
-    status: "Completed",
-  },
-
-  {
-    id: 5,
-    title: "Portfolio",
-    subtitle: "Personal Developer Portfolio",
-    slug: "personal-mern-portfolio",
-
-    shortDescription:
-      "A full-stack MERN portfolio showcasing projects, skills, and a functional contact system.",
-
-    description:
-      "This is a personal portfolio website built using the MERN stack to showcase projects, skills, and experience. It includes a backend-powered contact form implemented using Nodemailer for secure email delivery. The project follows a clean design approach with optimized performance and scalability in mind.",
-
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Nodemailer"],
-
-    features: [
-      "Modern and responsive UI",
-      "Dynamic project showcase",
-      "Backend-powered contact form",
-      "Email notifications using Nodemailer",
-      "Clean and scalable MERN architecture",
-    ],
-
-    githubLink: "https://github.com/MahasinProdhan/Portfolio", // placeholder
-    liveLink: "https://mahasinportfolio.vercel.app/", // placeholder
-    image: "/projects/portfolio.png",
     status: "Completed",
   },
 ];
