@@ -1,16 +1,124 @@
-# React + Vite
+# Mahasin Prodhan Portfolio Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is the frontend for a personal portfolio website built with React and Vite. It highlights Mahasin Prodhan's profile, skills, projects, education, and contact information in a fast, responsive single-page experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Responsive portfolio landing page
+- Section-based homepage with hero, about, skills, projects, education, and contact areas
+- Project details route for individual project views
+- Blog route placeholder
+- Contact form with toast-based success and error feedback
+- Smooth modern UI powered by Tailwind CSS and Framer Motion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite 7
+- React Router DOM
+- Tailwind CSS
+- Framer Motion
+- React Hot Toast
+- React Icons
+- Axios
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+frontend/
+|-- public/
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |-- data/
+|   |-- pages/
+|   |-- sections/
+|   |-- utils/
+|   |-- App.jsx
+|   |-- main.jsx
+|   |-- index.css
+|-- index.html
+|-- package.json
+|-- postcss.config.js
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Installation
+
+```bash
+cd frontend
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file inside `frontend/` and add:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+This value is used by the contact form to send requests to:
+
+```text
+/api/contact
+```
+
+## Available Scripts
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Runs the app in development mode with hot reload.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Creates an optimized production build in the `dist/` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+Serves the production build locally for preview.
+
+### Run Linting
+
+```bash
+npm run lint
+```
+
+Checks the codebase using ESLint.
+
+## Routes
+
+- `/` - Home page
+- `/projects/:id` - Project details page
+- `/blog` - Blog page
+- `*` - Not found page
+
+## Notes
+
+- The contact form depends on a backend service being available at `VITE_API_URL`.
+- Toast notifications are configured globally in `src/main.jsx`.
+- Styling is handled with Tailwind CSS and project-level custom styles.
+
+## License
+
+This project is for personal portfolio use.
