@@ -193,6 +193,7 @@ export const projects = [
     githubLink: "https://github.com/MahasinProdhan/Cognix", // placeholder
     liveLink: "https://cognix.app", // placeholder
     image: "/projects/cognix.png",
-    status: "Completed",
+    // status: "Completed",
+    status: "Ongoing",
   },
 ];
