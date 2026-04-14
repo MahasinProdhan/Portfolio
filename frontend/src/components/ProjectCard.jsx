@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
@@ -10,7 +9,6 @@ const ProjectCard = ({ project }) => {
     image,
     githubLink,
     liveLink,
-    slug,
     status,
   } = project;
 
@@ -56,23 +54,19 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Actions */}
-        <div className="flex items-center justify-between pt-4">
-          <Link
-            to={`/projects/${slug}`}
-            // className="text-sm font-semibold text-primary hover:underline"
-          >
-            <div></div>
-          </Link>
-
-          <div className="flex items-center gap-3">
+        <div className="flex justify-end pt-4">
+          <div className="flex flex-wrap items-center justify-end gap-3">
             {githubLink && (
               <a
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition text-textSecondary hover:text-primary"
+                aria-label={`View source code for ${title}`}
+                title="View Source Code"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-textSecondary transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:border-primary/30 hover:bg-primary/5 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
-                <FaGithub />
+                <FaGithub className="text-base" aria-hidden="true" />
+                <span>Code</span>
               </a>
             )}
 
@@ -81,9 +75,12 @@ const ProjectCard = ({ project }) => {
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition text-textSecondary hover:text-primary"
+                aria-label={`Open live project for ${title}`}
+                title="Open Project"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
-                <FaExternalLinkAlt />
+                <FaExternalLinkAlt className="text-sm" aria-hidden="true" />
+                <span>View Project</span>
               </a>
             )}
           </div>
